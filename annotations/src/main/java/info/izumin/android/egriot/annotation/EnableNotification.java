@@ -5,7 +5,12 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
-@Target(ElementType.TYPE)
+/**
+ * Created by izumin on 3/15/2016 AD.
+ */
+@Target(ElementType.METHOD)
 @Retention(RetentionPolicy.CLASS)
-public @interface GattClient {
+public @interface EnableNotification {
+    String serviceUuid();
+    String characteristicUuid();
 }
